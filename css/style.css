@@ -79,6 +79,7 @@ header{
     max-width: 1920px;
     margin: auto;
     /* padding-top: 40px; */
+    overflow-x: hidden;
     
     .headerdiv{
         max-width: 1440px;
@@ -91,8 +92,8 @@ header{
         img{
             max-width: 292px;
             width: 100%;
-            object-fit: cover;
-          height: -webkit-fill-available;
+         height: auto;  
+        object-fit: contain;
     
         }
         nav ul{
@@ -165,6 +166,7 @@ header{
     padding: 40px;
     padding-top: 80px;
     padding-bottom: 80px;
+        overflow-x: hidden;
       
         .div30{
             border-color: var(--color3);
@@ -237,6 +239,7 @@ header{
     max-width: 1920px;
     margin: auto;
     background-color: var(--color3);
+        overflow-x: hidden;
 
     .sec3{
         padding-top: 100px;
@@ -291,8 +294,34 @@ footer{
 
 /* RESPONSIVE */
 @media screen and (max-width:1024px){
-    .div3{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-   
-}}
+    body{
+        header{
+            /* display: grid; */
+            grid-template-columns:auto 1fr auto;
+            gap: 20px;
+            align-items: center;
+            padding: 15px 20px;
+            .headerdiv{
+                .iclass{
+                    display: none;
+                }
+            }
+
+        }
+        main{
+            #section2{
+                .div3{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+               
+            }
+        }
+
+        }
+        footer{
+
+        }
+        
+    }
+
+    }
