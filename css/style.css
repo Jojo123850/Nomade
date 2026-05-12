@@ -91,6 +91,7 @@ header{
 
         img{
             max-width: 292px;
+            min-width: 120px;
             width: 100%;
          height: auto;  
         object-fit: contain;
@@ -98,7 +99,6 @@ header{
         }
         nav ul{
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             padding-top: 120px; 
         }
@@ -109,7 +109,6 @@ header{
         }
         .iclass{
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             font-size: 24px;
             color: var(--color1);
@@ -296,14 +295,20 @@ footer{
 @media screen and (max-width:1024px){
     body{
         header{
-            /* display: grid; */
-            grid-template-columns:auto 1fr auto;
-            gap: 20px;
-            align-items: center;
-            padding: 15px 20px;
             .headerdiv{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
                 .iclass{
                     display: none;
+                     img {
+            max-width: 180px;  /* ← taille adaptée tablette */
+            min-width: 120px;
+        }
+
+        nav ul {
+            padding-top: 0;    /* ← supprime le padding-top: 120px qui décale tout */
+        }
                 }
             }
 
@@ -318,10 +323,83 @@ footer{
         }
 
         }
-        footer{
 
-        }
         
     }
 
+    }
+    @media screen and (max-width:767px) {
+          body{
+        header{
+            .headerdiv{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                .iclass{
+                    display: none;
+                }
+                #burgerMenu{
+                    display: block;
+                    align-self: center;
+                }
+                nav ul{
+                    display: none;
+                }
+            }
+
+        }
+        main{
+            #section1{
+                .divsec1{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    padding: 0;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    .div0{
+                        padding: 20px;
+                    }
+                }
+            }
+            #section2{
+                padding: 0;
+                margin-top: 40px;
+                 margin-bottom: 40px;
+                h2{
+                    padding-left: 20px;
+                }
+                .div3{
+                    display: grid;
+                    grid-template-columns: 1fr ;
+                    .div30{
+                        border-radius: 0;
+                        img{
+                            border-radius: 0;
+                        }
+
+                    }
+                  
+               
+            }
+        }
+        
+        #section3{
+            .sec3{
+                padding: 20px;
+            }
+        }
+        }
+
+        
+    }
+    footer{
+        display: grid;
+        text-align: center;
+        ul{
+            display: grid;
+            align-items: center;
+            padding-left: 0;
+        }
+    }
+        
     }
