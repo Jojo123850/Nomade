@@ -353,6 +353,11 @@ footer{
                     .div0{
                         padding: 20px;
                     }
+                    .image{
+                        img{
+                            border-radius: 0;
+                        }
+                    }
                 }
             }
             #section2{
