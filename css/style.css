@@ -307,21 +307,18 @@ footer{
             }
 
         }
-    main{
-        #section2{
-        .div3{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
         
     }
-    }
+    main{
+.div3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    }
+}
 
+    
 
-    }
-
-    }
+    }}
     @media screen and (max-width:767px) {
     body{
         header{
@@ -370,6 +367,7 @@ footer{
                 .div3{
                     display: grid;
                     grid-template-columns: 1fr ;
+                    gap: 40px;
                 .div30{
                     border-radius: 0;
                     img{
